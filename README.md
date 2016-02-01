@@ -9,7 +9,7 @@ For all out there for consuming Affilate APIs for blogging and their websites ad
 
 ##For Using FLIPSIDE.IO:
 
-For all the developers who want to integrate their sites using **flipside** you just need to provide your
+For all the developers who want to integrate their sites using **flipside** you just need to provide your Flipkart affiliate API Key(Access Token).
 
 For the code to work, you'll need to generate an access token through your affiliate account.
 
@@ -22,8 +22,8 @@ Eventhough you need not know much about [Guzzle HTTP API](http://guzzle.readthed
 You might say its easy to consume a service in php through curl but Guzzle has gone a long way doing the low level work for you through their library.
 Even many PHP Frameworks use Guzzle HTTP internally.
 
-I know there are many fans for CURL out there but Guzzle has lots of improvement over CURL.
-But if you are a die hard fan of CURL and dont want to create a overhead in learning Guzzle I would recommend you to se the work of [Saneem Flipkart API using CURL](https://github.com/xaneem/flipkart-api-php) where i got inspired to make **flipside.io**. I would say this is not a direct fork of saneem's PHP wrapper but an alternative for those who work with frameworks of OOPHP way.
+I know there are many fans for CURL out there but Guzzle has lots of improvements over CURL.
+But if you are a die hard fan of CURL and dont want to create an overhead in learning Guzzle I would recommend you to se the work of [Saneem Flipkart API using CURL](https://github.com/xaneem/flipkart-api-php) where i got inspired to make **flipside.io**. I would say this is not a direct fork of saneem's PHP wrapper but an alternative for those who work with frameworks which are in OOPHP way.
 Because configuring CURL is alot of pain.Moreover Pluggable HTTP handlers allows Guzzle to integrate with any method you choose for sending HTTP requests over the wire (e.g., cURL, sockets, PHP’s stream wrapper, non-blocking event loops like React, etc.).
 ##Note
 > Flipkart Affiliate API is still in beta.
