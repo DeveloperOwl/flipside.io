@@ -20,20 +20,25 @@ class FlipsideJSONClient extends FlipsideIO {
 
     //JSON Client Constructor
     public function __construct($fkAffiliateId, $fkAffiliateToken) {
-        //              super($fkAffiliateId,$fkAffiliateToken);
-        //Add the affiliateId and response_type to the base URL to complete it.
-        //$this->apiRequestUrl.=$this->apiBaseUrl . '.' . $this->affiliateId . '.' . $this->responseType;
+       // super($fkAffiliateId,$fkAffiliateToken);
+       // Add the affiliateId and response_type to the base URL to complete it.
+        
+        $this->fkAffiliateId = $fkAffiliateId;
+        $this->fkAffiliateToken = $fkAffiliateToken;
+        
+        
+        $this->apiRequestUrl.=$this->apiBaseUrl.$this->fkAffiliateId.'.json';
      
         $this->client = new Client();
-        echo get_class($this->client);
-        echo "JSON EXECTUED CONSTRUCTOR";
+        
     }
 
     //Make Request to API
     function makeRequest() {
         $request = $this->client->createRequest('GET', $this->apiRequestUrl);
+       
         $request->setHeader('Content-Type', 'application/json');
-        $request->setHeader('Cache-Control: no-cache');
+     //   $request->setHeader('Cache-Control: no-cache');
         $request->setHeader('Fk-Affiliate-Id', $this->fkAffiliateId);
         $request->setHeader('Fk-Affiliate-Token', $this->fkAffiliateToken);
         $response = $this->client->send($request);
@@ -42,8 +47,9 @@ class FlipsideJSONClient extends FlipsideIO {
         if (($responseCode == 410) || ($responseCode == 403) || ($responseCode == 401)) {
             returnApiError();
         }
-        echo "Harrsha";
-        echo $response->xml();
+        //echo "Harrsha";
+        //echo $response->json();
+        print_r($response->json());
     }
 
 }

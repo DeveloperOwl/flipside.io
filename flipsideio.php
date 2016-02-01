@@ -36,22 +36,20 @@ class FlipsideIO {
         $this->apiRequestUrl.=$this->apiBaseUrl.$this->fkAffiliateId.'.'.$this->responseType;
         
         if ($responseType == 'xml') {
-            echo "XML Clients Created";
+            //echo "XML Clients Created";
             $this->io = new FlipsideXMLClient($fkAffiliateId, $fkAffiliateToken);
         } else if ($responseType == 'json') {
-            echo "JSON Clients Created";
+            //echo "JSON Clients Created";
             $this->io = new FlipsideJSONClient($fkAffiliateId, $fkAffiliateToken);
         } else {
-            echo "No Clients Available";
+            //echo "No Clients Available";
             return null;
         }
     }
 
     function makeRequest1() {
 
-//        $objName= "Flipside".$this->responseType."Client"; 
-//        echo $objName;
-        echo get_class($this->io);
+        //echo get_class($this->io);
         $this->io->makeRequest();
     }
 
@@ -73,6 +71,6 @@ class FlipsideIO {
 //End Of Class
 
 
-$flip = new FlipsideIO('nathgopin', '0bbdf4bcaafd4ab6879f46c181caade5', 'json');
+$flip = new FlipsideIO('nathgopin', '0bbdf4bcaafd4ab6879f46c181caade5', 'xml');
 $flip->makeRequest1();
 ?>        
