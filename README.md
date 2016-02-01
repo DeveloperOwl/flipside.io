@@ -14,8 +14,8 @@ For all the developers who want to integrate their sites using **flipside** you 
 For the code to work, you'll need to generate an access token through your affiliate account.
 
 ##Upcoming
-1. I will make a Site using flipside for reference using Twitters Bootstrap which displays products in a selected category which are in stock which would be a great use for using it as a reference.
-2. Use of Monolog for Logging details.
+v1.0 I will make a Site using flipside for reference using Twitters Bootstrap which displays products in a selected category which are in stock which would be a great use for using it as a reference.
+v2.0 Use of Monolog for Logging details.
 
 ##For Contributers:
 Eventhough you need not know much about [Guzzle HTTP API](http://guzzle.readthedocs.org/en/latest/index.html).Its Good to know if you further want to write your own API consuming wrapper code.

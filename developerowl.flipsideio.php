@@ -36,8 +36,10 @@
                     if($responseType=='xml'){
                         return new FlipsideXMLClient();
                     }
-                    else{
+                    else if($responseType=='json'){
                         return new FlipsideJSONClient();
+                    }else{
+                        return null;
                     }
             }
 
@@ -51,6 +53,7 @@
                             
                  case 403:  echo 'Tampered URLThe URL contents are modified from the originally returned value';
                             break;
+                        
              }
          }
 
